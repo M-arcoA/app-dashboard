@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 
 import LoginComponent from '@/pages/Login/LoginComponent'
 import HomeComponent from '@/pages/Home/HomeComponent'
+import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/js/all.js'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
