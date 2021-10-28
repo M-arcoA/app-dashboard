@@ -9,7 +9,16 @@
             <div class="info">
                 <p class="name">Marco Aurélio</p>
                 <p class="status">online</p>
-            </div>
+            </div>    
+        </div>
+        <div class="menu">
+            <ul>
+                <li><router-link :to="{name: 'home'}"><i class="fa fa-home"></i> Início</router-link></li>
+                <li><router-link :to="{name: 'products'}"><i class="fa fa-box"></i> Produtos</router-link></li>
+                <li><router-link :to="{name: 'sales'}"><i class="fa fa-store"></i> Vendas</router-link></li>
+                <li><router-link :to="{name: 'reports'}"><i class="fa fa-chart-bar"></i> Relatórios</router-link></li>
+              
+            </ul>
         </div>
     </div>
 </template>
@@ -23,7 +32,7 @@ export default {
 
 <style lang="scss">
     .sidebar {
-        color: white;
+        color: #fff;
 
         .top{
             width: 100%;
@@ -48,6 +57,29 @@ export default {
                 }
                 .status {
                     font-size: 12px;
+                }
+            }
+        }
+        .menu{
+            padding: 15px;
+            margin-left: -30px;
+
+            ul {
+            
+                li {
+                    padding: 10px;
+                    list-style-type: none;
+                    border: none;
+                    transition: 0.3s;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+
+                li:hover{
+                    background-color: #1E90FF;
                 }
             }
         }
