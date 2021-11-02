@@ -7,7 +7,7 @@
                 </span>
             </div>
             <div class="info">
-                <p class="name">Marco Aurélio</p>
+                <p class="name">Nome do usuário</p>
                 <p class="status">online</p>
             </div>    
         </div>
@@ -57,6 +57,7 @@ export default {
                 }
                 .status {
                     font-size: 12px;
+                    color: #008000;
                 }
             }
         }

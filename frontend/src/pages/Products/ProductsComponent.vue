@@ -1,7 +1,10 @@
 <template>
     <DashBoardComponent>
         <div slot="slot-pages" class="content-pages">
-            <p>Produtos</p>
+            <header class="title_pages">
+                <p>Produtos</p>
+            </header>
+
         </div>
     </DashBoardComponent>
 </template>
