@@ -30,10 +30,11 @@ export default {
         display: flex;
         flex-direction: column;
         background-color: $light-gray;
-        width: 15em;
+        width: 10em;
         padding: 15px;
         border-radius: 7px;
         color: $white;
+        align-content: center;
 
         .content{
             display: flex;

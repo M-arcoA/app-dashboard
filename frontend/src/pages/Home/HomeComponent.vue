@@ -18,6 +18,14 @@
                     <div class="col-12 col-md-3">
                         <CardsComponent :type="'Vendas'" :percentage="'25%'" :icon="'fa-chart-bar'"  :qtd="'33'"/>    
                     </div>
+
+                    <div class="mt-5">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <ListsComponent  :users="users"/>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -29,11 +37,34 @@
 <script>
 import DashBoardComponent from '../DashBoard/DashBoardComponent';
 import CardsComponent from '../../components/CardsComponent';
+import ListsComponent from '../../components/ListsComponent';
+const axios = require('axios');
 
 export default {
+    name: 'HomeComponent',
+    data() {
+        return {
+            users: []
+        }
+    },
+    mounted() {
+        this.getUsers();
+    },
+    methods: {
+        async getUsers() {
+            const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+            if(response.status ==200){
+                this.users = response.data
+            } else{
+                console.error("Aconteceu um erro na API")
+            }
+        }
+    },
+
     components: {
         DashBoardComponent,
         CardsComponent,
+        ListsComponent,
     }
 }
 </script>
